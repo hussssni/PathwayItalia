@@ -1,21 +1,24 @@
 /* === CSS Variables === */
 :root {
-    --bg-dark: #0D1321;
-    --bg-surface: rgba(255, 255, 255, 0.03);
-    --bg-glass: rgba(13, 19, 33, 0.6);
-    --border-glass: rgba(255, 255, 255, 0.08);
+    --bg-dark: #6284C6;
+    --bg-surface: rgba(255, 255, 255, 0.1);
+    --bg-glass: rgba(98, 132, 198, 0.6);
+    --border-glass: rgba(255, 255, 255, 0.2);
 
-    --primary-blue: #6CA4E8;
-    --primary-blue-glow: rgba(108, 164, 232, 0.5);
-    --primary-yellow: #F5E050;
-    --primary-yellow-dim: rgba(245, 224, 80, 0.2);
+    --primary-blue: #6284C6;
+    --primary-blue-glow: rgba(255, 255, 255, 0.3);
+    --primary-yellow: #F2D449;
+    --primary-yellow-dim: rgba(242, 212, 73, 0.4);
 
     --text-pure: #ffffff;
-    --text-primary: #e2e8f0;
-    --text-secondary: #94a3b8;
+    --text-primary: #f8fafc;
+    --text-secondary: #e2e8f0;
+    --text-dark: #0f172a;
 
     --font-heading: 'Playfair Display', serif;
     --font-body: 'Inter', sans-serif;
+    --font-logo: 'TeX Gyre Termes', 'Times New Roman', serif;
+    --font-spartan: 'League Spartan', sans-serif;
 
     --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
@@ -99,7 +102,7 @@ a {
 
 .btn-primary {
     background-color: var(--primary-yellow);
-    color: var(--bg-dark);
+    color: var(--text-dark);
     font-weight: 600;
 }
 
@@ -153,15 +156,28 @@ a {
     align-items: center;
 }
 
-.logo {
-    font-size: 1.5rem;
-    letter-spacing: -0.5px;
-    color: var(--primary-yellow);
+.logo-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-decoration: none;
 }
 
-.logo span {
-    color: var(--primary-blue);
-    font-style: italic;
+.logo {
+    font-size: 2.2rem;
+    font-family: var(--font-logo);
+    font-weight: 400;
+    letter-spacing: 0;
+    color: var(--primary-yellow);
+    line-height: 1;
+}
+
+.logo-sub {
+    font-family: var(--font-spartan);
+    font-size: 0.55rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-top: 2px;
 }
 
 .nav-links {
@@ -266,9 +282,9 @@ a {
 .hero-badge {
     display: inline-block;
     padding: 0.4rem 1rem;
-    background: rgba(108, 164, 232, 0.15);
-    color: var(--primary-blue);
-    border: 1px solid rgba(108, 164, 232, 0.3);
+    background: rgba(255, 255, 255, 0.15);
+    color: var(--text-pure);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 50px;
     font-size: 0.85rem;
     font-weight: 500;
@@ -283,10 +299,7 @@ a {
 }
 
 .highlight-text {
-    background: linear-gradient(135deg, var(--primary-yellow) 0%, #fff 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--primary-yellow);
     display: inline-block;
 }
 
@@ -346,9 +359,9 @@ a {
     margin-bottom: 1.5rem;
     display: inline-flex;
     padding: 1rem;
-    background: rgba(108, 164, 232, 0.1);
+    background: rgba(255, 255, 255, 0.1);
     border-radius: 16px;
-    color: var(--primary-blue);
+    color: var(--primary-yellow);
 }
 
 .feature-card h3 {
